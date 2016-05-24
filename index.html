@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cider Randomizer</title>
+	<link rel="stylesheet" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Grand+Hotel|Karla:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+</head>
+<body>
+
+<header>
+	<h1>deCider: Cider Randomizer</h1>
+	<h2>Can't decide? Use deCider.</h2>
+</header>
+
+<section class="wrapper">
+
+<h3>Select your taste profile:</h3>
+
+<div class="globalTaste sweet">Sweet</div>
+
+	<div class="subSweetChoices">
+		<form action="">
+			<div class="flexWrapper">
+				<div class="flexItem">
+					<label class="beforeSelection" for="sweetAndFruity">
+						<input id="sweetAndFruity" value="Sweet & Fruity" name="subSweet" type="radio">
+						Sweet & Fruity
+					</label>
+				</div>
+
+				<div class="flexItem">
+					<label class="beforeSelection" for="sweetAndRustic">
+						<input id="sweetAndRustic" value="Sweet & Rustic" name="subSweet" type="radio">
+						Sweet & Rustic
+					</label>
+				</div>
+
+				<div class="flexItem">
+					<label class="beforeSelection" for="sweetAndAromatic">
+						<input id="sweetAndAromatic" value="Sweet & Aromatic" name="subSweet" type="radio">
+						Sweet & Aromatic
+					</label>
+				</div>
+			</div> <!-- end of flexWrapper -->
+			<button class="showMeSuggestions">
+				Show me suggestions!
+			</button>
+		</form>
+	</div>
+
+<div class="globalTaste dry">Dry</div>
+
+	<div class="subDryChoices">
+		<form action="">
+		<div class="flexWrapper">
+			<div class="flexItem">
+				<label for="dryAndFruity" class="beforeSelection">
+					<input for="dryAndFruity" class="subSweet" type="radio" value="Dry & Fruity" name="subSweet" id="dryAndFruity">
+					Dry & Fruity
+				</label>
+			</div>
+
+			<div class="flexItem">
+			<label for="dryAndCrisp" class="beforeSelection">
+				<input for="dryAndCrisp" class="subSweet" type="radio" value="Dry & Crisp" name="subSweet" id="dryAndCrisp">
+				Dry & Crisp
+			</label>
+			</div>
+
+			<div class="flexItem">
+				<label for="dryAndAromatic" class="beforeSelection">
+					<input for="dryAndAromatic" class="subSweet" type="radio" value="Dry & Aromatic" name="subSweet" id="dryAndAromatic">
+				Dry & Aromatic
+				</label>
+			</div>
+
+			<div class="flexItem">
+			<label for="dryAndRustic" class="beforeSelection">
+			<input for="dryAndRustic" class="subSweet" type="radio" value="Dry & Rustic" name="subSweet" id="dryAndRustic">
+				Dry & Rustic
+			</label>
+			</div>
+
+		</div>
+
+			<button class="showMeSuggestions">Show me suggestions!</button>
+
+		</form>
+	</div>
+
+<div class="globalTaste surpriseMe">Surprise me!</div>
+
+<h3 id="here">Here are some recommended ciders:</h3>
+<div id="finalCiders"></div>
+
+<button class="again">Again! Again!</button>
+
+</section>
+
+<footer>
+	<p>Made by <a href="http://justine.codes">Justine Chiu</a></p>
+	<p>Developed with the <a href="http://lcboapi.com">LCBO API</a>.</p>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
