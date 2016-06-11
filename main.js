@@ -85,7 +85,8 @@ ciderApp.getData = function(decision){
 		} // data
 	}) // -- $.ajax -->
 	.then(function(res){
-		console.log(res.result);
+		console.log(res.result[5]);
+		console.log(res.result[5].id);
 		var onlyImages = res.result.filter(function(cider) {
 			return cider.image_url
 		});
@@ -150,8 +151,9 @@ ciderApp.displayCiders = function(usersCiders) {
 
 		$('#finalCiders').append(ciderDiv);
 
-		$('html, body').animate({
-	 		scrollTop: $('#here').offset().top}, 750);
+		$('body').animate({
+	 		scrollTop: $('#here').offset().top
+	 	}, 500);
 
 		}) // -- end of forEach  -->
 

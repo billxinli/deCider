@@ -169,7 +169,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 html, body {
   background: white;
-  /*font-size: 150%;*/
+  font-size: 62.5%;
   font-family: 'Karla', 'Arial', sans-serif;
   text-align: center;
 }
@@ -182,22 +182,36 @@ header, footer {
 }
 
 header {
-  margin-bottom: 20px;
+  height: 100vh;
+}
+
+header .flex {
+  display: flex;
+}
+
+header .hero {
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 50%;
+  height: 300px;
+  background: darkgrey;
 }
 
 h1 {
-  font-family: 'Karla';
   margin: 0;
+  font-size: 2em;
 }
 
 h2 {
-  font-size: 150%;
+  font-size: 1.8em;
   margin: 0;
   background: white;
   color: black;
 }
 
 h3 {
+  font-size: 1.6em;
   background: black;
   color: white;
   padding: 5%;
@@ -205,14 +219,14 @@ h3 {
 }
 
 h4 {
-  font-size: 170%;
+  font-size: 1.4em;
   background: black;
   color: white;
   padding: 5%;
 }
 
 h5 {
-  font-size: 100%;
+  font-size: 1.2em;
   color: black;
   border: 1px solid black;
   padding: 5%;
@@ -221,7 +235,7 @@ h5 {
 h5.buy {
   background: dodgerblue;
   color: white;
-  font-size: 100%;
+  font-size: 1.2em;
   text-transform: uppercase;
   transition: all 0.5s ease-in-out;
 }
@@ -269,6 +283,12 @@ a:hover {
   padding-top: 20px;
 }
 
+@media (max-width: 469px) {
+  .flexWrapper {
+    flex-wrap: wrap;
+  }
+}
+
 .beforeSelection {
   background: #ddd;
   border: 1px solid black;
@@ -288,6 +308,12 @@ label {
   cursor: pointer;
 }
 
+@media (max-width: 469px) {
+  label {
+    width: 100%;
+  }
+}
+
 input[type=radio] {
   display: none;
 }
@@ -303,8 +329,54 @@ button {
   display: none;
 }
 
-.ciderResult {
-  width: 32%;
+@media (max-width: 769px) {
+  .subDryChoices .flexWrapper {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .subSweetChoices .flexWrapper {
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .subDryChoices .flexItem {
+    width: 50%;
+  }
+  .subSweetChoices .flexItem {
+    width: 33%;
+  }
+  .subDryChoices label {
+    width: 90%;
+  }
+  .ciderResult {
+    width: 32%;
+  }
+}
+
+@media (max-width: 769px) and (max-width: 769px) {
+  .ciderResult {
+    width: 48%;
+  }
+}
+
+@media (max-width: 769px) and (max-width: 469px) {
+  .ciderResult .ciderResult {
+    width: 100%;
+  }
+}
+
+@media (max-width: 769px) {
+  button {
+    background: yellow;
+    border: 0;
+  }
+}
+
+@media (max-width: 469px) {
+  .flexItem {
+    width: 100%;
+  }
 }
 
 #finalCiders {
@@ -337,59 +409,10 @@ footer {
 }
 
 figcaption {
-  font-size: 200%;
+  font-size: 2em;
   color: dodgerblue;
 }
 
 .subTastes {
   visibility: hidden;
-}
-
-@media (max-width: 769px) {
-  .ciderResult {
-    width: 48%;
-  }
-  h1 {
-    font-family: 'Karla';
-    font-size: 150%;
-    margin: 0;
-  }
-  .subDryChoices .flexWrapper {
-    width: 100%;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  .subSweetChoices .flexWrapper {
-    width: 100%;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  .subDryChoices .flexItem {
-    width: 50%;
-  }
-  .subSweetChoices .flexItem {
-    width: 33%;
-  }
-  .subDryChoices label {
-    width: 90%;
-  }
-  button {
-    background: yellow;
-    border: 0;
-  }
-}
-
-@media (max-width: 469px) {
-  .ciderResult {
-    width: 100%;
-  }
-  .flexWrapper {
-    flex-wrap: wrap;
-  }
-  .flexItem {
-    width: 100%;
-  }
-  label {
-    width: 100%;
-  }
 }

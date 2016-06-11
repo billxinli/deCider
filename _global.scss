@@ -1,0 +1,251 @@
+html, body {
+	background: white;
+	font-size: 62.5%;
+	font-family: 'Karla', 'Arial', sans-serif;
+	text-align: center;
+}
+
+header, footer {
+	margin: 0 auto;
+	background: black;
+	color: white;
+	padding: 20px;
+}
+
+header {
+	height: 100vh;
+
+	.flex {
+		display: flex;
+	}
+
+	.hero {
+		align-items: center;
+		justify-content: center;
+		margin: auto;
+		width: 50%;
+		height: 300px;
+		background: darkgrey;
+	}
+
+}
+
+h1 {
+	margin: 0;
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 1.8em;
+	margin: 0;
+	background: white;
+	color: black;
+}
+
+h3 {
+	font-size: 1.6em;
+	background: black;
+	color: white;
+	padding: 5%;
+	margin: 0;
+}
+
+h4 {
+	font-size: 1.4em;
+	background:black;
+	color: white;
+	padding: 5%;
+}
+
+h5 {
+	font-size: 1.2em;
+	color: black;
+	border: 1px solid black;
+	padding: 5%;
+}
+
+h5.buy {
+	background: dodgerblue;
+	color: white;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	transition: all 0.5s ease-in-out;
+}
+
+h5.buy:hover {
+	background:yellow;
+	color: tomato;
+}
+
+a {
+	color: papayaWhip;
+	text-decoration: none;
+}
+
+a:hover {
+	color: tomato;
+}
+
+.globalTaste {
+	width: 100%;
+	min-height: 30px;
+	padding: 5%;
+	display: inline-block;
+	text-align: center;
+	color: white;
+}
+
+.sweet {
+	background: #591d77;
+}
+
+.dry {
+	background: #600060;
+}
+
+.surpriseMe {
+	background: #8b008b;
+}
+
+
+/*Radio Buttons as Buttons*/
+
+.flexWrapper {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 20px;
+	@media (max-width: 469px) {
+			flex-wrap: wrap;
+		}
+	}
+
+.beforeSelection {
+	background: #ddd;
+	border: 1px solid black;
+}
+
+.selectionMade {
+	background: rebeccapurple;
+	color: white;
+}
+
+label {
+	padding: 20px;
+	/*width:28%;*/
+	height:100px;
+	overflow:hidden;
+	display:inline-block;
+	cursor:pointer;
+	@media (max-width: 469px) {
+		width: 100%;
+	}
+}
+
+input[type=radio]{
+	display: none;
+}
+
+
+
+
+button {
+	padding: 20px;
+	margin: 20px;
+	display: block;
+	margin: 20px auto;
+}
+
+.subSweetChoices, .subDryChoices {
+	display: none;
+}
+
+@media (max-width: 769px) {
+
+	.subDryChoices .flexWrapper {
+		width: 100%;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.subSweetChoices .flexWrapper {
+		width: 100%;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+
+	.subDryChoices .flexItem {
+		width: 50%;
+	}
+
+	.subSweetChoices .flexItem {
+		width: 33%;
+	}
+
+	.subDryChoices label {
+		width: 90%;
+	}
+
+.ciderResult {
+	width: 32%;
+		@media (max-width: 769px) {
+			width: 48%;
+		}
+		@media (max-width: 469px) {
+				.ciderResult {
+					width: 100%;
+				}
+		}
+}
+
+	button {
+		background:yellow;
+		border: 0;
+	}
+
+}
+
+@media (max-width: 469px) {
+
+		.flexItem {
+			width:100%;
+		}
+}
+
+#finalCiders {
+	overflow: hidden;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+figure {
+	width: 100%;
+}
+
+img {
+	display:block;
+	width: 100%;
+}
+
+.wrapper {
+	width: 80%;
+	max-width: 800px;
+	background: white;
+	margin: 0 auto;
+	padding: 20px;
+	border: solid 10px black;
+}
+
+footer {
+	margin-top: 20px;
+}
+
+figcaption {
+	font-size: 2em;
+	color: dodgerblue;
+}
+
+.subTastes {
+	visibility: hidden;
+}
