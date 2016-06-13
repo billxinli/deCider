@@ -168,10 +168,29 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 html, body {
-  background: white;
   font-size: 62.5%;
   font-family: 'Karla', 'Arial', sans-serif;
-  text-align: center;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 10rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.4rem;
 }
 
 header, footer {
@@ -183,53 +202,77 @@ header, footer {
 
 header {
   height: 100vh;
-}
-
-header .flex {
+  background: #333;
+  background-size: cover;
+  background-position: center center;
   display: flex;
-}
-
-header .hero {
   align-items: center;
   justify-content: center;
-  margin: auto;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   width: 50%;
-  height: 300px;
-  background: darkgrey;
+  max-width: 900px;
 }
 
-h1 {
-  margin: 0;
-  font-size: 2em;
+.hero .cider {
+  color: #88A9F7;
 }
 
-h2 {
-  font-size: 1.8em;
-  margin: 0;
-  background: white;
+.hero button.use {
+  background: transparent;
+  border: 2px solid #F6EA8C;
+  width: 30%;
+  margin-top: 30px;
+}
+
+.hero button.use:hover {
+  background: #F6EA8C;
   color: black;
 }
 
-h3 {
-  font-size: 1.6em;
-  background: black;
-  color: white;
-  padding: 5%;
-  margin: 0;
+.hero button.use p {
+  color: #FFFBE0;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
-h4 {
-  font-size: 1.4em;
-  background: black;
-  color: white;
-  padding: 5%;
-}
-
-h5 {
-  font-size: 1.2em;
+.hero button.use p:hover {
   color: black;
-  border: 1px solid black;
-  padding: 5%;
+}
+
+.hero button.use a {
+  color: #FFFBE0;
+}
+
+.hero h1 {
+  color: #F6EA8C;
+  text-shadow: 2px 2px black;
+}
+
+.hero h2 {
+  color: #CCCCCC;
+  text-shadow: 2px 2px black;
+}
+
+.hero h3 {
+  color: white;
+}
+
+.hero .top {
+  width: 100%;
+  align-self: center;
+}
+
+.hero .bottom {
+  width: 100%;
+}
+
+.hero .top object {
+  width: 30%;
 }
 
 h5.buy {
@@ -252,6 +295,18 @@ a {
 
 a:hover {
   color: tomato;
+}
+
+.taste-section {
+  height: 100vh;
+  background: #F6EA8C;
+  color: #333333;
+}
+
+.taste-section h2 {
+  padding: 20px 0;
+  text-transform: uppercase;
+  position: relative;
 }
 
 .globalTaste {
@@ -320,9 +375,7 @@ input[type=radio] {
 
 button {
   padding: 20px;
-  margin: 20px;
   display: block;
-  margin: 20px auto;
 }
 
 .subSweetChoices, .subDryChoices {
@@ -396,12 +449,9 @@ img {
 }
 
 .wrapper {
-  width: 80%;
-  max-width: 800px;
-  background: white;
+  width: 50%;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 20px;
-  border: solid 10px black;
 }
 
 footer {

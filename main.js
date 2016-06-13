@@ -9,6 +9,16 @@ var ciderApp = {};
 ciderApp.apiUrl = 'https://lcboapi.com/products/?access_key=MDplMzgyZmMzNC0xZmEyLTExZTYtYTRkOS1jZmFmZTcxODU4YTI6NEhMYURFWkptTXByNlZhQXFFVUk5cGcxNTlxa3A4cE5Pc0xN';
 
 //===================================================*/
+/* HERO STUFF
+===================================================*/
+
+$('#use').on('click', function () {
+	$.smoothScroll({
+		scrollTarget: '.taste-section'
+	});
+});
+
+//===================================================*/
 /* COLLECT INFORMATION
 ===================================================*/
 
