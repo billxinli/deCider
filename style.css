@@ -182,6 +182,10 @@ section, footer, header {
   margin: 0 auto;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 h1, h2, h3, h4, p {
   margin: 0;
   padding: 0;
@@ -382,7 +386,7 @@ header {
 }
 
 a {
-  color: papayaWhip;
+  color: #F6EA8C;
   text-decoration: none;
 }
 
@@ -468,7 +472,7 @@ button {
   padding: 20px;
 }
 
-button.use, .showMeSuggestions, .again {
+button.use, .showMeSuggestions {
   background: transparent;
   border: 2px solid #F6EA8C;
   border-radius: 10px;
@@ -476,28 +480,28 @@ button.use, .showMeSuggestions, .again {
   margin-top: 30px;
 }
 
-button.use:hover, .showMeSuggestions:hover, .again:hover {
+button.use:hover, .showMeSuggestions:hover {
   background: #F6EA8C;
   color: black;
 }
 
-button.use p, .showMeSuggestions p, .again p {
+button.use p, .showMeSuggestions p {
   color: #F3A871;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 2rem;
 }
 
-button.use p:hover, .showMeSuggestions p:hover, .again p:hover {
+button.use p:hover, .showMeSuggestions p:hover {
   color: black;
 }
 
-button.use a, .showMeSuggestions a, .again a {
+button.use a, .showMeSuggestions a {
   color: #FFFBE0;
 }
 
 @media (max-width: 768px) {
-  button.use, .showMeSuggestions, .again {
+  button.use, .showMeSuggestions {
     width: 50%;
   }
 }
@@ -528,16 +532,6 @@ button.use a, .showMeSuggestions a, .again a {
   .ciderResult {
     width: 100%;
   }
-}
-
-.again {
-  text-align: center;
-  background: #ed7b2a;
-  width: 30%;
-}
-
-.again p {
-  color: #F6EA8C;
 }
 
 #finalCiders,

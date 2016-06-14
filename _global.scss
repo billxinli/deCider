@@ -35,6 +35,10 @@ section, footer, header {
 	margin: 0 auto;
 }
 
+.uppercase {
+	text-transform: uppercase;
+}
+
 h1, h2, h3, h4, p {
 	margin: 0;
 	padding: 0;
@@ -242,7 +246,7 @@ header {
 }
 
 a {
-	color: papayaWhip;
+	color: $YELLOW;
 	text-decoration: none;
 }
 
@@ -402,15 +406,15 @@ button.use {
 	}
 }
 
-.again {
-	@extend button.use;
-	text-align: center;
-	background: $DARKPEACH;
-	width: 30%;
-	 p {
-	 	color: $YELLOW;
-	 }
-}
+// .again {
+// 	@extend button.use;
+// 	text-align: center;
+// 	background: $DARKPEACH;
+// 	width: 30%;
+// 	 p {
+// 	 	color: $YELLOW;
+// 	 }
+// }
 
 #finalCiders,
 .finalCiders {

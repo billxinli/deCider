@@ -167,20 +167,44 @@ ciderApp.displayCiders = function(usersCiders) {
 	// individualCider is a placeholder; each item is inside the array of usersCiders
 
 	// now we dynamically create HTML elements and store them in variables
-		var ciderImage = $('<img>')
-			.attr('src', individualCider.image_url);
-		var ciderTitle = $('<p>')
-			.text(individualCider.name);
-		var ciderDesc = $('<p>')
-			.text(individualCider.tasting_note);
-		var ciderPrice = $('<p>')
-			.text("$" + (individualCider.regular_price_in_cents/100).toFixed(2));
-		var ciderBuy = $('<p>')
-			.text("Buy");
-		var ciderDiv = $('<div class="ciderResult">')
-			.append(ciderImage, ciderTitle, ciderPrice, ciderBuy);
+		// var ciderImage = $('<img>')
+		// 	.attr('src', individualCider.image_url);
+		// var ciderTitle = $('<p>')
+		// 	.text(individualCider.name);
+		// var ciderDesc = $('<p>')
+		// 	.text(individualCider.tasting_note);
+		// var ciderPrice = $('<p>')
+		// 	.text("$" + (individualCider.regular_price_in_cents/100).toFixed(2));
+		// var ciderBuy = $('<p>')
+		// 	.text("Buy");
+		// var ciderDiv = $('<div class="ciderResult">')
+		// 	.append(ciderImage, ciderTitle, ciderPrice, ciderBuy);
 
-		$('#finalCiders').append(ciderDiv);
+		// $('#finalCiders').append(ciderDiv);
+
+
+
+		var drinkName = individualCider.name;
+		var drinkImg = individualCider.image_url;
+		var drinkDescription = individualCider.tasting_note;
+		var drinkStyle = individualCider.style;
+		ciderApp.drinkId = individualCider.id;
+		var drinkLink = "http://www.lcbo.com/lcbo/search?searchTerm=" + ciderApp.drinkId;
+
+		$('#finalCiders').append(
+			"<img class='drinkImg' src='" + drinkImg + "'>");
+		$('#finalCiders').append(
+			"<h3>" + drinkName + "</h2>");
+		$('#finalCiders').append(
+			"<p class='uppercase'>Style: " + 
+			drinkStyle + 
+			"</p>");
+		$('#finalCiders').append(
+			"<p><a href='" + drinkLink + "' target='_blank'>" + "More Details..." + "</a></p>");
+
+
+
+
 
 		}) // -- end of forEach  -->
 
