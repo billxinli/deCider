@@ -193,9 +193,9 @@ header {
 }
 
 .globalTaste {
-	border-radius: 10%;
-	height: 150px;
-	width: 150px;
+	border-radius: 10px;
+	width: 100%;
+	margin: 10px;
 	text-align: center;
 
 	@media (max-width: 768px) {
@@ -261,11 +261,10 @@ a:hover {
 	p {
 		font-size: 2rem;
 		text-align: center;
-		margin-top: 65px;
+		padding: 30px;
 
 		@media (max-width: 425px) {
 			font-size: 1.4rem;
-			margin-top: 45px;
 		}
 	}
 }
@@ -342,6 +341,7 @@ button {
 button.use {
 	background: transparent;
 	border: 2px solid $YELLOW;
+	border-radius: 10px;
 	width: 60%;
 	margin-top: 30px;
 
@@ -354,6 +354,7 @@ button.use {
 		color:  $PEACH;
 		text-transform: uppercase;
 		font-weight: bold;
+		font-size: 2rem;
 
 		&:hover {
 			color: black;
@@ -373,11 +374,7 @@ button.use {
 
 	@extend button.use;
 	text-align: center;
-	width: 30%;
-
-	@media (max-width: 900px){
-		width: 100%;
-	}
+	width: 100%;
 
 }
 

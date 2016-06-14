@@ -336,9 +336,9 @@ header {
 }
 
 .globalTaste, .beforeSelection {
-  border-radius: 10%;
-  height: 150px;
-  width: 150px;
+  border-radius: 10px;
+  width: 100%;
+  margin: 10px;
   text-align: center;
 }
 
@@ -398,13 +398,12 @@ a:hover {
 .taste-section p {
   font-size: 2rem;
   text-align: center;
-  margin-top: 65px;
+  padding: 30px;
 }
 
 @media (max-width: 425px) {
   .taste-section p {
     font-size: 1.4rem;
-    margin-top: 45px;
   }
 }
 
@@ -472,6 +471,7 @@ button {
 button.use, .showMeSuggestions, .again {
   background: transparent;
   border: 2px solid #F6EA8C;
+  border-radius: 10px;
   width: 60%;
   margin-top: 30px;
 }
@@ -485,6 +485,7 @@ button.use p, .showMeSuggestions p, .again p {
   color: #F3A871;
   text-transform: uppercase;
   font-weight: bold;
+  font-size: 2rem;
 }
 
 button.use p:hover, .showMeSuggestions p:hover, .again p:hover {
@@ -503,13 +504,7 @@ button.use a, .showMeSuggestions a, .again a {
 
 .showMeSuggestions {
   text-align: center;
-  width: 30%;
-}
-
-@media (max-width: 900px) {
-  .showMeSuggestions {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 .ciderResult {
