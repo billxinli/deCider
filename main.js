@@ -19,6 +19,28 @@ $('#use').on('click', function () {
 });
 
 //===================================================*/
+/* WHEN STYLE IS CHOSEN, GO DOWN TO SUB-STYLES
+===================================================*/
+
+$('#sweet').on('click', function () {
+	$.smoothScroll({
+		scrollTarget: '.sweet-sub-choices'
+	});
+});
+
+$('#dry').on('click', function () {
+	$.smoothScroll({
+		scrollTarget: '.dry-sub-choices'
+	});
+});
+
+$('#surpriseMe').on('click', function () {
+	$.smoothScroll({
+		scrollTarget: '.super-final-results'
+	});
+});
+
+//===================================================*/
 /* COLLECT INFORMATION
 ===================================================*/
 

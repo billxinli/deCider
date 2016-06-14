@@ -15,7 +15,6 @@
 	<div class="hero">
 		<div class="top">
 			<object type="image/svg+xml" data="cheers.svg">
-			  Your browser does not support SVG
 			</object>
 		</div>
 		<div class="bottom">
@@ -28,11 +27,38 @@
 
 <section id="taste-section" class="taste-section">
 
-<div class="wrapper">
+	<div class="flex">
 
-<h2>Select a style:</h2>
+	<h2 class="heading">Select a style:</h2>
 
-<div class="globalTaste sweet">Sweet</div>
+		<div class="style-wrapper">
+
+			<div class="globalTaste sweet" id="sweet">
+				<a href="#sweet-sub-choices">
+					<p>Sweet</p>
+				</a>
+			</div>
+
+			<div class="globalTaste dry" id="dry">
+				<a href="#dry-sub-choices">
+					<p>Dry</p>
+				</a>
+			</div>
+
+			<div class="globalTaste surpriseMe" id="surpriseMe">
+				<a href="#super-final-results">
+					<p>Surprise Me</p>
+				</a>
+			</div>
+
+		</div><!-- style wrapper -->
+	</div><!-- wrapper -->
+</section>
+
+<section class="sweet-sub-choices sweet" id="#sweet-sub-choices">
+<div class="flex">
+	
+	<h2 class="heading">Select a style:</h2>
 
 	<div class="subSweetChoices">
 		<form action="">
@@ -40,21 +66,21 @@
 				<div class="flexItem">
 					<label class="beforeSelection" for="sweetAndFruity">
 						<input id="sweetAndFruity" value="Sweet & Fruity" name="subSweet" type="radio">
-						Sweet & Fruity
+						<p>Sweet & Fruity</p>
 					</label>
 				</div>
 
 				<div class="flexItem">
 					<label class="beforeSelection" for="sweetAndRustic">
 						<input id="sweetAndRustic" value="Sweet & Rustic" name="subSweet" type="radio">
-						Sweet & Rustic
+						<p>Sweet & Rustic</p>
 					</label>
 				</div>
 
 				<div class="flexItem">
 					<label class="beforeSelection" for="sweetAndAromatic">
 						<input id="sweetAndAromatic" value="Sweet & Aromatic" name="subSweet" type="radio">
-						Sweet & Aromatic
+						<p>Sweet & Aromatic</p>
 					</label>
 				</div>
 			</div> <!-- end of flexWrapper -->
@@ -62,10 +88,14 @@
 				Show me suggestions!
 			</button>
 		</form>
-	</div>
+	</div><!-- subSweetChoices -->
 
-<div class="globalTaste dry">Dry</div>
+	</div><!-- flex -->
+</section>
 
+
+
+<section class="dry-sub-choices dry">
 	<div class="subDryChoices">
 		<form action="">
 		<div class="flexWrapper">
@@ -104,15 +134,21 @@
 		</form>
 	</div>
 
-<div class="globalTaste surpriseMe">Surprise me!</div>
-
-<h3 id="here">Here are some recommended ciders:</h3>
-<div id="finalCiders"></div>
-
-<button class="again">Again! Again!</button>
-
-</div>
 </section>
+
+
+
+
+
+<section class="super-final-results" id="super-final-results">
+	<h3 id="here">Here are some recommended ciders:</h3>
+	<div id="finalCiders"></div>
+
+	<button class="again">Again! Again!</button>
+</section>
+
+
+
 
 <footer>
 	<p>Made by <a href="http://justine.codes">Justine Chiu</a></p>

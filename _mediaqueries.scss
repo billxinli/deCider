@@ -1,0 +1,86 @@
+@media (max-width: 769px) {
+
+	.subDryChoices .flexWrapper {
+		width: 100%;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.subSweetChoices .flexWrapper {
+		width: 100%;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+
+	.subDryChoices .flexItem {
+		width: 50%;
+	}
+
+	.subSweetChoices .flexItem {
+		width: 33%;
+	}
+
+	.subDryChoices label {
+		width: 90%;
+	}
+
+.ciderResult {
+	width: 32%;
+		@media (max-width: 769px) {
+			width: 48%;
+		}
+		@media (max-width: 469px) {
+				.ciderResult {
+					width: 100%;
+				}
+		}
+}
+
+	button {
+		background:yellow;
+		border: 0;
+	}
+
+}
+
+@media (max-width: 469px) {
+
+		.flexItem {
+			width:100%;
+		}
+}
+
+#finalCiders {
+	overflow: hidden;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+figure {
+	width: 100%;
+}
+
+img {
+	display:block;
+	width: 100%;
+}
+
+.wrapper {
+	width: 50%;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+footer {
+	margin-top: 20px;
+}
+
+figcaption {
+	font-size: 2em;
+	color: dodgerblue;
+}
+
+.subTastes {
+	visibility: hidden;
+}

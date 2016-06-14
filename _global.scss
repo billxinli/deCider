@@ -2,14 +2,23 @@
 // DEFAULT STYLES
 // =============
 
-$OFFWHITE: #FFFBE0;
+$PEACH: #F3A871;
+$LIGHTPEACH: #F9D3B8;
+$DARKPEACH: #ed7b2a;
+$ROSE: #F06161;
+$LIGHTROSE: #F49090;
+$CHARCOAL: #303841;
 $YELLOW: #F6EA8C;
+
+$OFFWHITE: #FFFBE0;
 $GOLD: #FFB400;
 $PURPLE: #492540;
 $ORANGE: #F26D5B;
 $RED: #C03546;
 $BLUE: #88A9F7;
 $DARKGREY: #333333;
+$LEMON: #E9EC82;
+$DUSTYROSE: #EB786B;
 
 html, body {
 	font-size: 62.5%;
@@ -23,10 +32,19 @@ h1, h2, h3, h4, p {
 
 h1 {
 	font-size: 10rem;
+
+	@media (max-width: 768px) {
+		font-size: 7rem;
+	}
 }
 
 h2 {
 	font-size: 3.5rem;
+
+	@media (max-width: 768px) {
+		font-size: 3rem;
+	}
+
 }
 
 h3 {
@@ -35,6 +53,11 @@ h3 {
 
 p {
 	font-size: 1.4rem;
+}
+
+.flex {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 // =============
@@ -49,8 +72,8 @@ header, footer {
 }
 
 header {
-	height: 100vh;
-	background: #333;
+	min-height: 100vh;
+	background: $CHARCOAL;
 	background-size: cover;
 	background-position: center center;
 	display: flex;
@@ -66,7 +89,7 @@ header {
 	max-width: 900px;
 
 	.cider {
-		color: $BLUE;
+		color: $ROSE;
 	}
 
 	button.use {
@@ -81,7 +104,7 @@ header {
 		}
 
 		p {
-			color: $OFFWHITE;
+			color:  $PEACH;
 			text-transform: uppercase;
 			font-weight: bold;
 
@@ -93,15 +116,19 @@ header {
 		a {
 			color: $OFFWHITE;
 		}
+
+		@media (max-width: 768px) {
+			width: 50%;
+		}
 	}
 
 	h1 {
-		color: $YELLOW;
+		color: $PEACH;
 		text-shadow: 2px 2px black;
 	}
 
 	h2 {
-		color: #CCCCCC;
+		color: $YELLOW;
 		text-shadow: 2px 2px black;
 	}
 
@@ -124,6 +151,80 @@ header {
 
 }
 
+// =============
+// SELECT STYLE
+// =============
+
+.taste-section {
+	display: flex;
+
+	@media (max-width: 425px) {
+		padding: 40px;
+	}
+}
+
+.taste-section .flex {
+	height: content;
+	max-width: 600px;
+	width: 80%;
+	margin: auto;
+
+	@media (max-width: 768px) {
+		width: 100%;
+	}
+}
+
+.style-wrapper {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.globalTaste {
+	border-radius: 10%;
+	height: 150px;
+	width: 150px;
+	text-align: center;
+	color: white;
+
+	@media (max-width: 768px) {
+		height: 120px;
+		width: 120px;
+	}
+
+	@media (max-width: 425px) {
+		height: 100px;
+		width: 100px;
+	}
+
+}
+
+// =============
+// AFTER SELECTING A STYLE, SHOW THESE
+// =============
+
+.sweet-sub-choices,
+.dry-sub-choices {
+	height: 100vh;
+}
+
+.sweet-sub-choices {
+	background: $GOLD;
+}
+
+.dry-sub-choices {
+	background: $YELLOW;
+}
+
+// =============
+// RESULTS
+// =============
+
+.super-final-results {
+	height: 100vh;
+	background: pink;
+}
+
 h5.buy {
 	background: dodgerblue;
 	color: white;
@@ -133,7 +234,7 @@ h5.buy {
 }
 
 h5.buy:hover {
-	background:yellow;
+	background: yellow;
 	color: tomato;
 }
 
@@ -143,7 +244,13 @@ a {
 }
 
 a:hover {
-	color: tomato;
+	color: $CHARCOAL;
+}
+
+h2.heading {
+	padding: 20px 0;
+	text-transform: uppercase;
+	position: relative;
 }
 
 .taste-section {
@@ -151,33 +258,33 @@ a:hover {
 	background: $YELLOW;
 	color: $DARKGREY;
 
-	h2 {
-		padding: 20px 0;
-		text-transform: uppercase;
-		position: relative;
+	p {
+		font-size: 2rem;
+		text-align: center;
+		margin-top: 65px;
+
+		@media (max-width: 425px) {
+			font-size: 1.4rem;
+			margin-top: 45px;
+		}
 	}
 
 }
 
-.globalTaste {
-	width: 100%;
-	min-height: 30px;
-	padding: 5%;
-	display: inline-block;
-	text-align: center;
-	color: white;
+.sweet {
+	background: $PEACH;
 }
 
-.sweet {
-	background: #591d77;
+.sweet-next {
+	background: $LIGHTPEACH;
 }
 
 .dry {
-	background: #600060;
+	background: $LIGHTROSE;
 }
 
 .surpriseMe {
-	background: #8b008b;
+	background: $ROSE;
 }
 
 
@@ -185,7 +292,6 @@ a:hover {
 
 .flexWrapper {
 	display: flex;
-	justify-content: space-between;
 	width: 100%;
 	padding-top: 20px;
 	@media (max-width: 469px) {
@@ -193,9 +299,14 @@ a:hover {
 		}
 	}
 
+.sweet-sub-choices .flexWrapper {
+	justify-content: space-around;
+}
+
 .beforeSelection {
-	background: #ddd;
-	border: 1px solid black;
+	@extend .globalTaste;
+	@extend .sweet-next;
+	box-shadow: 5px 5px 0px 0px $DARKPEACH;
 }
 
 .selectionMade {
@@ -226,91 +337,4 @@ button {
 
 .subSweetChoices, .subDryChoices {
 	display: none;
-}
-
-@media (max-width: 769px) {
-
-	.subDryChoices .flexWrapper {
-		width: 100%;
-		justify-content: space-between;
-		flex-wrap: wrap;
-	}
-
-	.subSweetChoices .flexWrapper {
-		width: 100%;
-		justify-content: space-around;
-		flex-wrap: wrap;
-	}
-
-	.subDryChoices .flexItem {
-		width: 50%;
-	}
-
-	.subSweetChoices .flexItem {
-		width: 33%;
-	}
-
-	.subDryChoices label {
-		width: 90%;
-	}
-
-.ciderResult {
-	width: 32%;
-		@media (max-width: 769px) {
-			width: 48%;
-		}
-		@media (max-width: 469px) {
-				.ciderResult {
-					width: 100%;
-				}
-		}
-}
-
-	button {
-		background:yellow;
-		border: 0;
-	}
-
-}
-
-@media (max-width: 469px) {
-
-		.flexItem {
-			width:100%;
-		}
-}
-
-#finalCiders {
-	overflow: hidden;
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
-}
-
-figure {
-	width: 100%;
-}
-
-img {
-	display:block;
-	width: 100%;
-}
-
-.wrapper {
-	width: 50%;
-	max-width: 900px;
-	margin: 0 auto;
-}
-
-footer {
-	margin-top: 20px;
-}
-
-figcaption {
-	font-size: 2em;
-	color: dodgerblue;
-}
-
-.subTastes {
-	visibility: hidden;
 }

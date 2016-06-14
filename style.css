@@ -181,8 +181,20 @@ h1 {
   font-size: 10rem;
 }
 
+@media (max-width: 768px) {
+  h1 {
+    font-size: 7rem;
+  }
+}
+
 h2 {
   font-size: 3.5rem;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 3rem;
+  }
 }
 
 h3 {
@@ -193,6 +205,11 @@ p {
   font-size: 1.4rem;
 }
 
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 header, footer {
   margin: 0 auto;
   background: black;
@@ -201,8 +218,8 @@ header, footer {
 }
 
 header {
-  height: 100vh;
-  background: #333;
+  min-height: 100vh;
+  background: #303841;
   background-size: cover;
   background-position: center center;
   display: flex;
@@ -219,7 +236,7 @@ header {
 }
 
 .hero .cider {
-  color: #88A9F7;
+  color: #F06161;
 }
 
 .hero button.use {
@@ -235,7 +252,7 @@ header {
 }
 
 .hero button.use p {
-  color: #FFFBE0;
+  color: #F3A871;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -248,13 +265,19 @@ header {
   color: #FFFBE0;
 }
 
+@media (max-width: 768px) {
+  .hero button.use {
+    width: 50%;
+  }
+}
+
 .hero h1 {
-  color: #F6EA8C;
+  color: #F3A871;
   text-shadow: 2px 2px black;
 }
 
 .hero h2 {
-  color: #CCCCCC;
+  color: #F6EA8C;
   text-shadow: 2px 2px black;
 }
 
@@ -273,6 +296,75 @@ header {
 
 .hero .top object {
   width: 30%;
+}
+
+.taste-section {
+  display: flex;
+}
+
+@media (max-width: 425px) {
+  .taste-section {
+    padding: 40px;
+  }
+}
+
+.taste-section .flex {
+  height: content;
+  max-width: 600px;
+  width: 80%;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .taste-section .flex {
+    width: 100%;
+  }
+}
+
+.style-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.globalTaste, .beforeSelection {
+  border-radius: 10%;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .globalTaste, .beforeSelection {
+    height: 120px;
+    width: 120px;
+  }
+}
+
+@media (max-width: 425px) {
+  .globalTaste, .beforeSelection {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+.sweet-sub-choices,
+.dry-sub-choices {
+  height: 100vh;
+}
+
+.sweet-sub-choices {
+  background: #FFB400;
+}
+
+.dry-sub-choices {
+  background: #F6EA8C;
+}
+
+.super-final-results {
+  height: 100vh;
+  background: pink;
 }
 
 h5.buy {
@@ -294,7 +386,13 @@ a {
 }
 
 a:hover {
-  color: tomato;
+  color: #303841;
+}
+
+h2.heading {
+  padding: 20px 0;
+  text-transform: uppercase;
+  position: relative;
 }
 
 .taste-section {
@@ -303,37 +401,38 @@ a:hover {
   color: #333333;
 }
 
-.taste-section h2 {
-  padding: 20px 0;
-  text-transform: uppercase;
-  position: relative;
+.taste-section p {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 65px;
 }
 
-.globalTaste {
-  width: 100%;
-  min-height: 30px;
-  padding: 5%;
-  display: inline-block;
-  text-align: center;
-  color: white;
+@media (max-width: 425px) {
+  .taste-section p {
+    font-size: 1.4rem;
+    margin-top: 45px;
+  }
 }
 
 .sweet {
-  background: #591d77;
+  background: #F3A871;
+}
+
+.sweet-next, .beforeSelection {
+  background: #F9D3B8;
 }
 
 .dry {
-  background: #600060;
+  background: #F49090;
 }
 
 .surpriseMe {
-  background: #8b008b;
+  background: #F06161;
 }
 
 /*Radio Buttons as Buttons*/
 .flexWrapper {
   display: flex;
-  justify-content: space-between;
   width: 100%;
   padding-top: 20px;
 }
@@ -344,9 +443,12 @@ a:hover {
   }
 }
 
+.sweet-sub-choices .flexWrapper {
+  justify-content: space-around;
+}
+
 .beforeSelection {
-  background: #ddd;
-  border: 1px solid black;
+  box-shadow: 5px 5px 0px 0px #ed7b2a;
 }
 
 .selectionMade {
