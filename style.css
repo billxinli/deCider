@@ -170,6 +170,12 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 html, body {
   font-size: 62.5%;
   font-family: 'Karla', 'Arial', sans-serif;
+  color: #303841;
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
 }
 
 h1, h2, h3, h4, p {
@@ -197,6 +203,12 @@ h2 {
   }
 }
 
+h2.heading {
+  padding: 20px 0;
+  text-transform: uppercase;
+  position: relative;
+}
+
 h3 {
   font-size: 2.5rem;
 }
@@ -210,11 +222,37 @@ p {
   flex-wrap: wrap;
 }
 
+.sweet {
+  background: #F3A871;
+}
+
+.sweet-next, .beforeSelection {
+  background: #F9D3B8;
+}
+
+.dry {
+  background: #F49090;
+}
+
+.surpriseMe {
+  background: #F06161;
+}
+
+.flexWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
 header, footer {
   margin: 0 auto;
   background: black;
   color: white;
-  padding: 20px;
+}
+
+footer p {
+  padding: 0;
+  margin: 0;
 }
 
 header {
@@ -239,38 +277,6 @@ header {
   color: #F06161;
 }
 
-.hero button.use {
-  background: transparent;
-  border: 2px solid #F6EA8C;
-  width: 30%;
-  margin-top: 30px;
-}
-
-.hero button.use:hover {
-  background: #F6EA8C;
-  color: black;
-}
-
-.hero button.use p {
-  color: #F3A871;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.hero button.use p:hover {
-  color: black;
-}
-
-.hero button.use a {
-  color: #FFFBE0;
-}
-
-@media (max-width: 768px) {
-  .hero button.use {
-    width: 50%;
-  }
-}
-
 .hero h1 {
   color: #F3A871;
   text-shadow: 2px 2px black;
@@ -279,10 +285,6 @@ header {
 .hero h2 {
   color: #F6EA8C;
   text-shadow: 2px 2px black;
-}
-
-.hero h3 {
-  color: white;
 }
 
 .hero .top {
@@ -298,25 +300,14 @@ header {
   width: 30%;
 }
 
-.taste-section {
-  display: flex;
-}
-
-@media (max-width: 425px) {
-  .taste-section {
-    padding: 40px;
-  }
-}
-
-.taste-section .flex {
-  height: content;
-  max-width: 600px;
-  width: 80%;
+.wrapper {
+  width: 50%;
+  max-width: 900px;
   margin: auto;
 }
 
 @media (max-width: 768px) {
-  .taste-section .flex {
+  .wrapper {
     width: 100%;
   }
 }
@@ -332,7 +323,6 @@ header {
   height: 150px;
   width: 150px;
   text-align: center;
-  color: white;
 }
 
 @media (max-width: 768px) {
@@ -349,21 +339,21 @@ header {
   }
 }
 
+.subSweetChoices, .subDryChoices {
+  display: none;
+}
+
 .sweet-sub-choices,
 .dry-sub-choices {
   height: 100vh;
 }
 
-.sweet-sub-choices {
-  background: #FFB400;
-}
-
-.dry-sub-choices {
-  background: #F6EA8C;
+.subDryChoices .flexItem {
+  width: 15%;
 }
 
 .super-final-results {
-  height: 100vh;
+  min-height: 100vh;
   background: pink;
 }
 
@@ -389,16 +379,9 @@ a:hover {
   color: #303841;
 }
 
-h2.heading {
-  padding: 20px 0;
-  text-transform: uppercase;
-  position: relative;
-}
-
 .taste-section {
   height: 100vh;
   background: #F6EA8C;
-  color: #333333;
 }
 
 .taste-section p {
@@ -414,46 +397,32 @@ h2.heading {
   }
 }
 
-.sweet {
-  background: #F3A871;
-}
-
-.sweet-next, .beforeSelection {
-  background: #F9D3B8;
-}
-
-.dry {
-  background: #F49090;
-}
-
-.surpriseMe {
-  background: #F06161;
-}
-
 /*Radio Buttons as Buttons*/
-.flexWrapper {
-  display: flex;
-  width: 100%;
-  padding-top: 20px;
-}
-
-@media (max-width: 469px) {
-  .flexWrapper {
-    flex-wrap: wrap;
-  }
-}
-
 .sweet-sub-choices .flexWrapper {
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.sweet-sub-choices .showMeSuggestions {
+  background: #F6EA8C;
+}
+
+.dry-sub-choices .flexWrapper {
+  justify-content: space-between;
+}
+
+.dry-sub-choices .showMeSuggestions {
+  background: #F6EA8C;
 }
 
 .beforeSelection {
   box-shadow: 5px 5px 0px 0px #ed7b2a;
+  transition: all 0.3s ease-in-out;
 }
 
 .selectionMade {
-  background: rebeccapurple;
+  background: #ed7b2a;
   color: white;
+  box-shadow: 0px 0px 0px 0px #F9D3B8;
 }
 
 label {
@@ -477,11 +446,90 @@ input[type=radio] {
 
 button {
   padding: 20px;
-  display: block;
 }
 
-.subSweetChoices, .subDryChoices {
-  display: none;
+button.use, .showMeSuggestions, .again {
+  background: transparent;
+  border: 2px solid #F6EA8C;
+  width: 60%;
+  margin-top: 30px;
+}
+
+button.use:hover, .showMeSuggestions:hover, .again:hover {
+  background: #F6EA8C;
+  color: black;
+}
+
+button.use p, .showMeSuggestions p, .again p {
+  color: #F3A871;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+button.use p:hover, .showMeSuggestions p:hover, .again p:hover {
+  color: black;
+}
+
+button.use a, .showMeSuggestions a, .again a {
+  color: #FFFBE0;
+}
+
+@media (max-width: 768px) {
+  button.use, .showMeSuggestions, .again {
+    width: 50%;
+  }
+}
+
+.showMeSuggestions {
+  text-align: center;
+  width: 30%;
+}
+
+.ciderResult img {
+  width: 25%;
+}
+
+@media (max-width: 769px) {
+  .ciderResult {
+    width: 32%;
+  }
+}
+
+@media (max-width: 469px) {
+  .ciderResult {
+    width: 100%;
+  }
+}
+
+.again {
+  text-align: center;
+  background: #ed7b2a;
+  width: 30%;
+}
+
+.again p {
+  color: #F6EA8C;
+}
+
+#finalCiders {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+figure {
+  width: 100%;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+figcaption {
+  font-size: 2em;
+  color: dodgerblue;
 }
 
 @media (max-width: 769px) {
@@ -504,67 +552,10 @@ button {
   .subDryChoices label {
     width: 90%;
   }
-  .ciderResult {
-    width: 32%;
-  }
-}
-
-@media (max-width: 769px) and (max-width: 769px) {
-  .ciderResult {
-    width: 48%;
-  }
-}
-
-@media (max-width: 769px) and (max-width: 469px) {
-  .ciderResult .ciderResult {
-    width: 100%;
-  }
-}
-
-@media (max-width: 769px) {
-  button {
-    background: yellow;
-    border: 0;
-  }
 }
 
 @media (max-width: 469px) {
   .flexItem {
     width: 100%;
   }
-}
-
-#finalCiders {
-  overflow: hidden;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-figure {
-  width: 100%;
-}
-
-img {
-  display: block;
-  width: 100%;
-}
-
-.wrapper {
-  width: 50%;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-footer {
-  margin-top: 20px;
-}
-
-figcaption {
-  font-size: 2em;
-  color: dodgerblue;
-}
-
-.subTastes {
-  visibility: hidden;
 }

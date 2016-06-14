@@ -25,9 +25,9 @@
 	</div>
 </header>
 
-<section id="taste-section" class="taste-section">
+<section class="taste-section flexWrapper" id="taste-section">
 
-	<div class="flex">
+	<div class="wrapper">
 
 	<h2 class="heading">Select a style:</h2>
 
@@ -55,14 +55,16 @@
 	</div><!-- wrapper -->
 </section>
 
-<section class="sweet-sub-choices sweet" id="#sweet-sub-choices">
-<div class="flex">
-	
-	<h2 class="heading">Select a style:</h2>
+<section class="sweet-sub-choices sweet flexWrapper">
 
-	<div class="subSweetChoices">
+	<div class="wrapper">
+	
+		<h2 class="heading">Select another style:</h2>
+
+	<div class="style-wrapper subSweetChoices">
 		<form action="">
 			<div class="flexWrapper">
+			
 				<div class="flexItem">
 					<label class="beforeSelection" for="sweetAndFruity">
 						<input id="sweetAndFruity" value="Sweet & Fruity" name="subSweet" type="radio">
@@ -84,9 +86,12 @@
 					</label>
 				</div>
 			</div> <!-- end of flexWrapper -->
+
+			
 			<button class="showMeSuggestions">
-				Show me suggestions!
+				<p>Show me suggestions!</p>
 			</button>
+
 		</form>
 	</div><!-- subSweetChoices -->
 
@@ -95,56 +100,64 @@
 
 
 
-<section class="dry-sub-choices dry">
-	<div class="subDryChoices">
-		<form action="">
-		<div class="flexWrapper">
-			<div class="flexItem">
-				<label for="dryAndFruity" class="beforeSelection">
-					<input for="dryAndFruity" class="subSweet" type="radio" value="Dry & Fruity" name="subSweet" id="dryAndFruity">
-					Dry & Fruity
-				</label>
-			</div>
+<section class="dry-sub-choices dry flexWrapper">
+	
+	<div class="wrapper">
 
-			<div class="flexItem">
-			<label for="dryAndCrisp" class="beforeSelection">
-				<input for="dryAndCrisp" class="subSweet" type="radio" value="Dry & Crisp" name="subSweet" id="dryAndCrisp">
-				Dry & Crisp
-			</label>
-			</div>
+		<h2 class="heading">Select another style:</h2>
 
-			<div class="flexItem">
-				<label for="dryAndAromatic" class="beforeSelection">
-					<input for="dryAndAromatic" class="subSweet" type="radio" value="Dry & Aromatic" name="subSweet" id="dryAndAromatic">
-				Dry & Aromatic
-				</label>
-			</div>
+		<div class="style-wrapper subDryChoices">
+			<form action="">
+				<div class="flexWrapper">
 
-			<div class="flexItem">
-			<label for="dryAndRustic" class="beforeSelection">
-			<input for="dryAndRustic" class="subSweet" type="radio" value="Dry & Rustic" name="subSweet" id="dryAndRustic">
-				Dry & Rustic
-			</label>
-			</div>
+					<div class="flexItem">
+						<label class="beforeSelection" for="dryAndFruity">
+							<input for="dryAndFruity" type="radio" value="Dry & Fruity" name="subSweet" id="dryAndFruity">
+							<p>Dry & Fruity</p>
+						</label>
+					</div>
 
-		</div>
+					<div class="flexItem">
+					<label for="dryAndCrisp" class="beforeSelection">
+						<input for="dryAndCrisp" type="radio" value="Dry & Crisp" name="subSweet" id="dryAndCrisp">
+						<p>Dry & Crisp</p>
+					</label>
+					</div>
 
-			<button class="showMeSuggestions">Show me suggestions!</button>
+					<div class="flexItem">
+						<label for="dryAndAromatic" class="beforeSelection">
+							<input for="dryAndAromatic" type="radio" value="Dry & Aromatic" name="subSweet" id="dryAndAromatic">
+						<p>Dry & Aromatic</p>
+						</label>
+					</div>
 
-		</form>
-	</div>
+					<div class="flexItem">
+						<label for="dryAndRustic" class="beforeSelection">
+							<input for="dryAndRustic" class="subSweet" type="radio" value="Dry & Rustic" name="subSweet" id="dryAndRustic">
+							<p>Dry & Rustic</p>
+						</label>
+					</div>
 
+				</div>
+
+				<button class="showMeSuggestions"><p>Show me suggestions!</p></button>
+
+			</form>
+
+		</div><!-- subDryChoices -->
+	</div><!-- wrapper -->
 </section>
 
 
 
 
 
-<section class="super-final-results" id="super-final-results">
-	<h3 id="here">Here are some recommended ciders:</h3>
+<section class="super-final-results surpriseMe flexWrapper" id="super-final-results">
+<div class="wrapper">
+	<h2 class="heading" id="here">Recommendations:</h3>
 	<div id="finalCiders"></div>
-
-	<button class="again">Again! Again!</button>
+	<button class="again"><p>Again! Again!</p></button>
+</div>
 </section>
 
 

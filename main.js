@@ -72,7 +72,6 @@ ciderApp.listeners = function(){
 			$(myParentElement).addClass('selectionMade');
 	});
 
-
 // If user clicks on SURPRISE ME...
 	$('.surpriseMe').on('click', function() {
 			ciderApp.getData('random');
@@ -113,12 +112,12 @@ ciderApp.getData = function(decision){
 		dataType: 'json',
 		data: {
 			q: 'Ciders',
-			per_page: '100'
+			per_page: '5',
 		} // data
 	}) // -- $.ajax -->
 	.then(function(res){
-		console.log(res.result[5]);
-		console.log(res.result[5].id);
+		console.log(res.result[4]);
+		console.log(res.result[4].id);
 		var onlyImages = res.result.filter(function(cider) {
 			return cider.image_url
 		});
@@ -168,26 +167,28 @@ ciderApp.displayCiders = function(usersCiders) {
 	// individualCider is a placeholder; each item is inside the array of usersCiders
 
 	// now we dynamically create HTML elements and store them in variables
-		var ciderTitle = $('<h4>')
+		var ciderTitle = $('<h3>')
 			.text(individualCider.name);
-		var ciderDesc = $('<h5>')
+		var ciderDesc = $('<p>')
 			.text(individualCider.tasting_note);
 		var ciderImage = $('<img>')
 			.attr('src', individualCider.image_url);
-		var ciderPrice = $('<h5>')
+		var ciderPrice = $('<p>')
 			.text("$" + (individualCider.regular_price_in_cents/100).toFixed(2));
-		var ciderBuy = $('<h5 class="buy">')
+		var ciderBuy = $('<p>')
 			.text("Buy");
 		var ciderDiv = $('<div class="ciderResult">')
 			.append(ciderTitle, ciderDesc, ciderImage, ciderPrice, ciderBuy);
 
 		$('#finalCiders').append(ciderDiv);
 
-		$('body').animate({
+		}) // -- end of forEach  -->
+
+	// Originally had it within the forEach, now moved it outside of it, so it scrolls down once it loads
+
+	$('body').animate({
 	 		scrollTop: $('#here').offset().top
 	 	}, 500);
-
-		}) // -- end of forEach  -->
 
 	}; // end of displayCiders
 

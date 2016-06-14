@@ -23,6 +23,12 @@ $DUSTYROSE: #EB786B;
 html, body {
 	font-size: 62.5%;
 	font-family: 'Karla', 'Arial', sans-serif;
+	color: $CHARCOAL;
+}
+
+.center {
+	text-align: center;
+	margin: 0 auto;
 }
 
 h1, h2, h3, h4, p {
@@ -47,6 +53,12 @@ h2 {
 
 }
 
+h2.heading {
+	padding: 20px 0;
+	text-transform: uppercase;
+	position: relative;
+}
+
 h3 {
 	font-size: 2.5rem;
 }
@@ -60,6 +72,28 @@ p {
 	flex-wrap: wrap;
 }
 
+.sweet {
+	background: $PEACH;
+}
+
+.sweet-next {
+	background: $LIGHTPEACH;
+}
+
+.dry {
+	background: $LIGHTROSE;
+}
+
+.surpriseMe {
+	background: $ROSE;
+}
+
+.flexWrapper {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
 // =============
 // HERO
 // =============
@@ -68,7 +102,13 @@ header, footer {
 	margin: 0 auto;
 	background: black;
 	color: white;
-	padding: 20px;
+}
+
+footer {
+	p {
+		padding: 0;
+		margin: 0;
+	}
 }
 
 header {
@@ -92,36 +132,6 @@ header {
 		color: $ROSE;
 	}
 
-	button.use {
-		background: transparent;
-		border: 2px solid $YELLOW;
-		width: 30%;
-		margin-top: 30px;
-
-		&:hover {
-			background: $YELLOW;
-			color: black;
-		}
-
-		p {
-			color:  $PEACH;
-			text-transform: uppercase;
-			font-weight: bold;
-
-			&:hover {
-				color: black;
-			}
-		}
-
-		a {
-			color: $OFFWHITE;
-		}
-
-		@media (max-width: 768px) {
-			width: 50%;
-		}
-	}
-
 	h1 {
 		color: $PEACH;
 		text-shadow: 2px 2px black;
@@ -130,10 +140,6 @@ header {
 	h2 {
 		color: $YELLOW;
 		text-shadow: 2px 2px black;
-	}
-
-	h3 {
-		color: white;
 	}
 
 	.top {
@@ -155,18 +161,9 @@ header {
 // SELECT STYLE
 // =============
 
-.taste-section {
-	display: flex;
-
-	@media (max-width: 425px) {
-		padding: 40px;
-	}
-}
-
-.taste-section .flex {
-	height: content;
-	max-width: 600px;
-	width: 80%;
+.wrapper {
+	width: 50%;
+	max-width: 900px;
 	margin: auto;
 
 	@media (max-width: 768px) {
@@ -185,7 +182,6 @@ header {
 	height: 150px;
 	width: 150px;
 	text-align: center;
-	color: white;
 
 	@media (max-width: 768px) {
 		height: 120px;
@@ -203,25 +199,25 @@ header {
 // AFTER SELECTING A STYLE, SHOW THESE
 // =============
 
+.subSweetChoices, .subDryChoices {
+	display: none;
+}
+
 .sweet-sub-choices,
 .dry-sub-choices {
 	height: 100vh;
 }
 
-.sweet-sub-choices {
-	background: $GOLD;
-}
-
-.dry-sub-choices {
-	background: $YELLOW;
-}
+.subDryChoices .flexItem {
+		width: 15%;
+	}
 
 // =============
 // RESULTS
 // =============
 
 .super-final-results {
-	height: 100vh;
+	min-height: 100vh;
 	background: pink;
 }
 
@@ -247,16 +243,13 @@ a:hover {
 	color: $CHARCOAL;
 }
 
-h2.heading {
-	padding: 20px 0;
-	text-transform: uppercase;
-	position: relative;
-}
+// =============
+// TASTE SECTION
+// =============
 
 .taste-section {
 	height: 100vh;
 	background: $YELLOW;
-	color: $DARKGREY;
 
 	p {
 		font-size: 2rem;
@@ -268,50 +261,37 @@ h2.heading {
 			margin-top: 45px;
 		}
 	}
-
 }
-
-.sweet {
-	background: $PEACH;
-}
-
-.sweet-next {
-	background: $LIGHTPEACH;
-}
-
-.dry {
-	background: $LIGHTROSE;
-}
-
-.surpriseMe {
-	background: $ROSE;
-}
-
 
 /*Radio Buttons as Buttons*/
 
-.flexWrapper {
-	display: flex;
-	width: 100%;
-	padding-top: 20px;
-	@media (max-width: 469px) {
-			flex-wrap: wrap;
-		}
-	}
-
 .sweet-sub-choices .flexWrapper {
-	justify-content: space-around;
+	justify-content: space-between;
+}
+
+.sweet-sub-choices .showMeSuggestions {
+	background: $YELLOW;
+}
+
+.dry-sub-choices .flexWrapper {
+	justify-content: space-between;
+}
+
+.dry-sub-choices .showMeSuggestions {
+	background: $YELLOW;
 }
 
 .beforeSelection {
 	@extend .globalTaste;
 	@extend .sweet-next;
 	box-shadow: 5px 5px 0px 0px $DARKPEACH;
+	transition: all 0.3s ease-in-out;
 }
 
 .selectionMade {
-	background: rebeccapurple;
+	background: $DARKPEACH;
 	color: white;
+	box-shadow: 0px 0px 0px 0px $LIGHTPEACH;
 }
 
 label {
@@ -330,11 +310,93 @@ input[type=radio]{
 	display: none;
 }
 
+
+// BUTTONS
+
 button {
 	padding: 20px;
-	display: block;
 }
 
-.subSweetChoices, .subDryChoices {
-	display: none;
+button.use {
+	background: transparent;
+	border: 2px solid $YELLOW;
+	width: 60%;
+	margin-top: 30px;
+
+	&:hover {
+		background: $YELLOW;
+		color: black;
+	}
+
+	p {
+		color:  $PEACH;
+		text-transform: uppercase;
+		font-weight: bold;
+
+		&:hover {
+			color: black;
+		}
+	}
+
+	a {
+		color: $OFFWHITE;
+	}
+
+	@media (max-width: 768px) {
+		width: 50%;
+	}
+}
+
+.showMeSuggestions {
+
+	@extend button.use;
+	text-align: center;
+	width: 30%;
+}
+
+// CIDER DIV
+
+.ciderResult {
+	img {
+		width: 25%;
+	}
+
+	@media (max-width: 769px) {
+		width: 32%;
+	}
+
+	@media (max-width: 469px) {
+		width: 100%;
+	}
+}
+
+.again {
+	@extend button.use;
+	text-align: center;
+	background: $DARKPEACH;
+	width: 30%;
+	 p {
+	 	color: $YELLOW;
+	 }
+}
+
+#finalCiders {
+	overflow: hidden;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+figure {
+	width: 100%;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+figcaption {
+	font-size: 2em;
+	color: dodgerblue;
 }
