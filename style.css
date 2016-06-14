@@ -173,6 +173,10 @@ html, body {
   color: #303841;
 }
 
+section, footer, header {
+  padding: 20px;
+}
+
 .center {
   text-align: center;
   margin: 0 auto;
@@ -246,7 +250,7 @@ p {
 
 header, footer {
   margin: 0 auto;
-  background: black;
+  background: #333333;
   color: white;
 }
 
@@ -276,6 +280,12 @@ header {
   flex-direction: column;
   width: 50%;
   max-width: 900px;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    width: 100%;
+  }
 }
 
 .hero .cider {
@@ -336,6 +346,7 @@ header {
   .globalTaste, .beforeSelection {
     height: 120px;
     width: 120px;
+    border-radius: 15px;
   }
 }
 
@@ -352,29 +363,22 @@ header {
 
 .sweet-sub-choices,
 .dry-sub-choices {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .subDryChoices .flexItem {
   width: 15%;
 }
 
+@media (max-width: 1100px) {
+  .subDryChoices .flexItem {
+    width: 50%;
+  }
+}
+
 .super-final-results {
   min-height: 100vh;
   background: white;
-}
-
-h5.buy {
-  background: dodgerblue;
-  color: white;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  transition: all 0.5s ease-in-out;
-}
-
-h5.buy:hover {
-  background: yellow;
-  color: tomato;
 }
 
 a {
@@ -387,7 +391,7 @@ a:hover {
 }
 
 .taste-section {
-  height: 100vh;
+  min-height: 100vh;
   background: #F6EA8C;
 }
 
@@ -404,9 +408,14 @@ a:hover {
   }
 }
 
-/*Radio Buttons as Buttons*/
 .sweet-sub-choices .flexWrapper {
   justify-content: space-between;
+}
+
+@media (max-width: 1100px) {
+  .sweet-sub-choices .flexWrapper {
+    justify-content: center;
+  }
 }
 
 .sweet-sub-choices .showMeSuggestions {
@@ -415,6 +424,12 @@ a:hover {
 
 .dry-sub-choices .flexWrapper {
   justify-content: space-between;
+}
+
+@media (max-width: 1100px) {
+  .dry-sub-choices .flexWrapper {
+    justify-content: center;
+  }
 }
 
 .dry-sub-choices .showMeSuggestions {
@@ -434,7 +449,6 @@ a:hover {
 
 label {
   padding: 20px;
-  /*width:28%;*/
   height: 100px;
   overflow: hidden;
   display: inline-block;
@@ -490,6 +504,12 @@ button.use a, .showMeSuggestions a, .again a {
 .showMeSuggestions {
   text-align: center;
   width: 30%;
+}
+
+@media (max-width: 900px) {
+  .showMeSuggestions {
+    width: 100%;
+  }
 }
 
 .ciderResult {

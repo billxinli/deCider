@@ -112,7 +112,7 @@ ciderApp.getData = function(decision){
 		dataType: 'json',
 		data: {
 			q: 'Ciders',
-			per_page: '10'
+			per_page: '100'
 		} // data
 	}) // -- $.ajax -->
 	.then(function(res){
@@ -143,7 +143,7 @@ ciderApp.getData = function(decision){
 			ciderApp.displayCiders(randomResults);
 		} else{
 				var filteredResults = onlyImages.filter(function(cider) {
-					return cider.style === decision || cider.style === `Medium-${decision}`;
+					return cider.style === decision  && cider.id != '184796' || cider.style === `Medium-${decision}` && cider.id != '184796';
 				});
 
 				ciderApp.displayCiders(filteredResults);
