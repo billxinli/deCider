@@ -191,16 +191,17 @@ ciderApp.displayCiders = function(usersCiders) {
 		ciderApp.drinkId = individualCider.id;
 		var drinkLink = "http://www.lcbo.com/lcbo/search?searchTerm=" + ciderApp.drinkId;
 
+		
 		$('#finalCiders').append(
-			"<img class='drinkImg' src='" + drinkImg + "'>");
+			"<figure><img class='drinkImg center' src='" + drinkImg + "'></figure>");
 		$('#finalCiders').append(
-			"<h3>" + drinkName + "</h2>");
+			"<h3 class='center'>" + drinkName + "</h3>");
 		$('#finalCiders').append(
-			"<p class='uppercase'>Style: " + 
+			"<p class='uppercase center'>Style: " + 
 			drinkStyle + 
 			"</p>");
 		$('#finalCiders').append(
-			"<p><a href='" + drinkLink + "' target='_blank'>" + "More Details..." + "</a></p>");
+			"<p class='center'><a href='" + drinkLink + "' target='_blank'>" + "More Details..." + "</a></p>");
 
 
 

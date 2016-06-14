@@ -237,24 +237,6 @@ header {
 	}
 
 // =============
-// RESULTS
-// =============
-
-.super-final-results {
-	min-height: 100vh;
-	background: white;
-}
-
-a {
-	color: $YELLOW;
-	text-decoration: none;
-}
-
-a:hover {
-	color: $CHARCOAL;
-}
-
-// =============
 // TASTE SECTION
 // =============
 
@@ -383,28 +365,64 @@ button.use {
 }
 
 // =============
-// CIDER DIV
+// RESULTS
 // =============
 
-.ciderResult {
-
-	width: 50%;
-	display: inline-block;
-	text-align: center;
-
-	img {
-		width: 100%;
-		height: 100%;
-	}
-
-	@media (max-width: 769px) {
-		width: 32%;
-	}
-
-	@media (max-width: 469px) {
-		width: 100%;
-	}
+.super-final-results {
+	min-height: 100vh;
+	background: white;
 }
+
+a {
+	color: $YELLOW;
+	text-decoration: none;
+}
+
+a:hover {
+	color: $CHARCOAL;
+}
+
+#finalCiders,
+.finalCiders {
+	overflow: hidden;
+	// display: flex;
+	// justify-content: space-around;
+	// flex-wrap: wrap;
+}
+
+.flex-results {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+figure {
+	width: 100%;
+}
+
+.drinkImg {
+	width: 100%;
+}
+
+// .ciderResult {
+
+// 	width: 50%;
+// 	display: inline-block;
+// 	text-align: center;
+
+// 	img {
+// 		width: 100%;
+// 		height: 100%;
+// 	}
+
+// 	@media (max-width: 769px) {
+// 		width: 32%;
+// 	}
+
+// 	@media (max-width: 469px) {
+// 		width: 100%;
+// 	}
+// }
 
 // .again {
 // 	@extend button.use;
@@ -415,20 +433,3 @@ button.use {
 // 	 	color: $YELLOW;
 // 	 }
 // }
-
-#finalCiders,
-.finalCiders {
-	overflow: hidden;
-	// display: flex;
-	// justify-content: space-around;
-	// flex-wrap: wrap;
-}
-
-figure {
-	width: 100%;
-}
-
-figcaption {
-	font-size: 2em;
-	color: dodgerblue;
-}
