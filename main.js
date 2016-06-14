@@ -112,12 +112,12 @@ ciderApp.getData = function(decision){
 		dataType: 'json',
 		data: {
 			q: 'Ciders',
-			per_page: '5',
+			per_page: '10'
 		} // data
 	}) // -- $.ajax -->
 	.then(function(res){
-		console.log(res.result[4]);
-		console.log(res.result[4].id);
+		console.log(res.result[9]);
+		console.log(res.result[9].id);
 		var onlyImages = res.result.filter(function(cider) {
 			return cider.image_url
 		});
@@ -167,18 +167,18 @@ ciderApp.displayCiders = function(usersCiders) {
 	// individualCider is a placeholder; each item is inside the array of usersCiders
 
 	// now we dynamically create HTML elements and store them in variables
-		var ciderTitle = $('<h3>')
+		var ciderImage = $('<img>')
+			.attr('src', individualCider.image_url);
+		var ciderTitle = $('<p>')
 			.text(individualCider.name);
 		var ciderDesc = $('<p>')
 			.text(individualCider.tasting_note);
-		var ciderImage = $('<img>')
-			.attr('src', individualCider.image_url);
 		var ciderPrice = $('<p>')
 			.text("$" + (individualCider.regular_price_in_cents/100).toFixed(2));
 		var ciderBuy = $('<p>')
 			.text("Buy");
 		var ciderDiv = $('<div class="ciderResult">')
-			.append(ciderTitle, ciderDesc, ciderImage, ciderPrice, ciderBuy);
+			.append(ciderImage, ciderTitle, ciderPrice, ciderBuy);
 
 		$('#finalCiders').append(ciderDiv);
 

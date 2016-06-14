@@ -108,6 +108,11 @@ footer {
 	p {
 		padding: 0;
 		margin: 0;
+		font-size: 2rem;
+	}
+
+	.wrapper {
+		padding: 30px 0;
 	}
 }
 
@@ -145,10 +150,12 @@ header {
 	.top {
 		width: 100%;
 		align-self: center;
+		text-align: center;
 	}
 
 	.bottom {
 		width: 100%;
+		text-align: center;
 	}
 
 	.top object {
@@ -218,7 +225,7 @@ header {
 
 .super-final-results {
 	min-height: 100vh;
-	background: pink;
+	background: white;
 }
 
 h5.buy {
@@ -357,8 +364,14 @@ button.use {
 // CIDER DIV
 
 .ciderResult {
+
+	width: 50%;
+	display: inline-block;
+	text-align: center;
+
 	img {
-		width: 25%;
+		width: 100%;
+		height: 100%;
 	}
 
 	@media (max-width: 769px) {
@@ -380,19 +393,15 @@ button.use {
 	 }
 }
 
-#finalCiders {
+#finalCiders,
+.finalCiders {
 	overflow: hidden;
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
+	// display: flex;
+	// justify-content: space-around;
+	// flex-wrap: wrap;
 }
 
 figure {
-	width: 100%;
-}
-
-img {
-	display: block;
 	width: 100%;
 }
 

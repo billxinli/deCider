@@ -253,6 +253,11 @@ header, footer {
 footer p {
   padding: 0;
   margin: 0;
+  font-size: 2rem;
+}
+
+footer .wrapper {
+  padding: 30px 0;
 }
 
 header {
@@ -290,10 +295,12 @@ header {
 .hero .top {
   width: 100%;
   align-self: center;
+  text-align: center;
 }
 
 .hero .bottom {
   width: 100%;
+  text-align: center;
 }
 
 .hero .top object {
@@ -354,7 +361,7 @@ header {
 
 .super-final-results {
   min-height: 100vh;
-  background: pink;
+  background: white;
 }
 
 h5.buy {
@@ -485,8 +492,15 @@ button.use a, .showMeSuggestions a, .again a {
   width: 30%;
 }
 
+.ciderResult {
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+}
+
 .ciderResult img {
-  width: 25%;
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 769px) {
@@ -511,19 +525,12 @@ button.use a, .showMeSuggestions a, .again a {
   color: #F6EA8C;
 }
 
-#finalCiders {
+#finalCiders,
+.finalCiders {
   overflow: hidden;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
 }
 
 figure {
-  width: 100%;
-}
-
-img {
-  display: block;
   width: 100%;
 }
 
