@@ -12,6 +12,14 @@ ciderApp.apiUrl = 'https://lcboapi.com/products/?access_key=MDplMzgyZmMzNC0xZmEy
 /* HERO STUFF
 ===================================================*/
 
+// When "USE THE DECIDER" is clicked, open up the Sweet, Dry, Surprise Me section
+
+$('#use').on('click', function() {
+	$('.taste-section').fadeIn();
+});
+
+// And SCROLL down to the Sweet, Dry, Surprise Me section
+
 $('#use').on('click', function () {
 	$.smoothScroll({
 		scrollTarget: '.taste-section'
@@ -22,17 +30,53 @@ $('#use').on('click', function () {
 /* WHEN STYLE IS CHOSEN, GO DOWN TO SUB-STYLES
 ===================================================*/
 
+// Show the section of the sub sweet choices
+$('.globalTaste.sweet').on('click', function() {
+		$('.sweet-sub-choices').fadeIn();
+	});
+
+// Show the choices
+$('.globalTaste.sweet').on('click', function() {
+		$('.subSweetChoices').fadeIn();
+	});
+
+// And SCROLL down to the sub sweet choices
 $('#sweet').on('click', function () {
 	$.smoothScroll({
 		scrollTarget: '.sweet-sub-choices'
 	});
 });
 
+// And SCROLL down to the results section
+$('input[name=subSweet]').on('click', function() {
+		$('.super-final-results').fadeIn();
+	});
+
+// Show the section of the sub sweet choices
+$('.globalTaste.dry').on('click', function() {
+		$('.dry-sub-choices').fadeIn();
+	});
+
+// Show the choices
+$('.globalTaste.dry').on('click', function() {
+		$('.subDryChoices').fadeIn();
+	});
+
 $('#dry').on('click', function () {
 	$.smoothScroll({
 		scrollTarget: '.dry-sub-choices'
 	});
 });
+
+// And SCROLL down to the results section
+$('input[name=subDry]').on('click', function() {
+		$('.super-final-results').fadeIn();
+	});
+
+// Show the results section
+$('#surpriseMe').on('click', function() {
+		$('.super-final-results').fadeIn();
+	});
 
 $('#surpriseMe').on('click', function () {
 	$.smoothScroll({
@@ -49,9 +93,6 @@ ciderApp.listeners = function(){
 
 
 // If user clicks on SWEET...
-	$('.globalTaste.sweet').on('click', function() {
-			$('.subSweetChoices').fadeIn();
-		});
 	
 	$('.subSweetChoices .beforeSelection input').on('click', function(){
 		var whatIreallyClicked 	= $(this).parent();
@@ -62,8 +103,8 @@ ciderApp.listeners = function(){
 
 // If user clicks on DRY...
 	$('.globalTaste.dry').on('click', function() {
-			$('.subDryChoices').fadeIn();
-		});
+		$('.subDryChoices').fadeIn();
+	});
 
 	$('.subDryChoices .beforeSelection input').on('click', function(){
 		var whatIreallyClicked 	= $(this).parent();

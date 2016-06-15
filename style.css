@@ -367,6 +367,7 @@ header {
 
 .sweet-sub-choices,
 .dry-sub-choices {
+  display: none;
   min-height: 100vh;
 }
 
@@ -381,6 +382,7 @@ header {
 }
 
 .taste-section {
+  display: none;
   min-height: 100vh;
   background: #F6EA8C;
 }
@@ -498,6 +500,7 @@ button.use a, .showMeSuggestions a {
 }
 
 .super-final-results {
+  display: none;
   min-height: 100vh;
   background: white;
 }

@@ -225,6 +225,7 @@ header {
 
 .sweet-sub-choices,
 .dry-sub-choices {
+	display: none;
 	min-height: 100vh;
 }
 
@@ -241,6 +242,7 @@ header {
 // =============
 
 .taste-section {
+	display: none;
 	min-height: 100vh;
 	background: $YELLOW;
 
@@ -369,6 +371,7 @@ button.use {
 // =============
 
 .super-final-results {
+	display: none;
 	min-height: 100vh;
 	background: white;
 }
