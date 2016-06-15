@@ -173,6 +173,15 @@ html, body {
   color: #303841;
 }
 
+a {
+  color: #F6EA8C;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #303841;
+}
+
 section, footer, header {
   padding: 20px;
 }
@@ -223,6 +232,7 @@ h3 {
 
 p {
   font-size: 1.4rem;
+  margin: auto;
 }
 
 .flex {
@@ -344,6 +354,7 @@ header {
   width: 100%;
   margin: 10px;
   text-align: center;
+  display: flex;
 }
 
 @media (max-width: 768px) {
@@ -387,10 +398,15 @@ header {
   background: #F6EA8C;
 }
 
+.taste-section a {
+  margin: auto;
+}
+
 .taste-section p {
   font-size: 2rem;
   text-align: center;
   padding: 30px;
+  vertical-align: middle;
 }
 
 @media (max-width: 425px) {
@@ -505,12 +521,12 @@ button.use a, .showMeSuggestions a {
   background: white;
 }
 
-a {
-  color: #F6EA8C;
+.super-final-results a {
+  color: #F3A871;
   text-decoration: none;
 }
 
-a:hover {
+.super-final-results a:hover {
   color: #303841;
 }
 
