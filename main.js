@@ -163,19 +163,6 @@ ciderApp.getData = function(decision){
 			return cider.image_url
 		});
 
-// ALTERNATE APPROACHES TO FILTER; understand how they work and why we don't use them:
-
-// var filteredResults = [];
-// res.result.forEach(function(cider) {
-// 	if (cider.style === decision || cider.style === `Medium-${decision}`) {
-// 		cider.myNewKey = 'thing';
-// 		filteredResults.push(cider);
-// 	}
-// });
-// var mappedResults = res.result.map(function(cider) {
-// 	return cider.name;
-// });
-
 //===================================================*/
 /* RANDOM RESULTS
 ===================================================*/
