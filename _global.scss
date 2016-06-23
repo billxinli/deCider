@@ -223,6 +223,9 @@ header {
 	flex-direction: column;
 	align-items: center;
 	margin: 0 auto;
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 }
 
 .globalTaste {
@@ -343,7 +346,7 @@ header {
 
 label {
 	padding: 20px;
-	height: 100px;
+	// height: 100px;
 	overflow: hidden;
 	display: inline-block;
 	cursor: pointer;

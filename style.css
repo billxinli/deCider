@@ -375,6 +375,12 @@ header {
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  .style-wrapper {
+    width: 100%;
+  }
+}
+
 .globalTaste, .subSweetChoices .beforeSelection, .subDryChoices .beforeSelection {
   border-radius: 10px;
   width: 100%;
@@ -479,7 +485,6 @@ header {
 
 label {
   padding: 20px;
-  height: 100px;
   overflow: hidden;
   display: inline-block;
   cursor: pointer;
