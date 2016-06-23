@@ -2,6 +2,8 @@
 /* GLOBAL VARIABLES
 ===================================================*/
 
+console.log('nailing it');
+
 // Empty object for the ciderApp to live in
 var ciderApp = {};
 
@@ -195,23 +197,6 @@ ciderApp.displayCiders = function(usersCiders) {
 	// individualCider is a placeholder; each item is inside the array of usersCiders
 
 	// now we dynamically create HTML elements and store them in variables
-		// var ciderImage = $('<img>')
-		// 	.attr('src', individualCider.image_url);
-		// var ciderTitle = $('<p>')
-		// 	.text(individualCider.name);
-		// var ciderDesc = $('<p>')
-		// 	.text(individualCider.tasting_note);
-		// var ciderPrice = $('<p>')
-		// 	.text("$" + (individualCider.regular_price_in_cents/100).toFixed(2));
-		// var ciderBuy = $('<p>')
-		// 	.text("Buy");
-		// var ciderDiv = $('<div class="ciderResult">')
-		// 	.append(ciderImage, ciderTitle, ciderPrice, ciderBuy);
-
-		// $('#finalCiders').append(ciderDiv);
-
-
-
 		var drinkName = individualCider.name;
 		var drinkImg = individualCider.image_url;
 		var drinkDescription = individualCider.tasting_note;
@@ -231,7 +216,22 @@ ciderApp.displayCiders = function(usersCiders) {
 		$('#finalCiders').append(
 			"<p class='center'><a href='" + drinkLink + "' target='_blank'>" + "More Details..." + "</a></p>");
 
+// Below is another way of displaying the HTML elements - still deciding which one make me supa gangsta. Maybe I should make another decider app for that...
 
+// var ciderImage = $('<img>')
+// 	.attr('src', individualCider.image_url);
+// var ciderTitle = $('<p>')
+// 	.text(individualCider.name);
+// var ciderDesc = $('<p>')
+// 	.text(individualCider.tasting_note);
+// var ciderPrice = $('<p>')
+// 	.text("$" + (individualCider.regular_price_in_cents/100).toFixed(2));
+// var ciderBuy = $('<p>')
+// 	.text("Buy");
+// var ciderDiv = $('<div class="ciderResult">')
+// 	.append(ciderImage, ciderTitle, ciderPrice, ciderBuy);
+
+// $('#finalCiders').append(ciderDiv);
 
 
 
@@ -249,6 +249,9 @@ ciderApp.displayCiders = function(usersCiders) {
 //===================================================*/
 // RESTART THE APP
 //===================================================*/
+
+// Some day, when you're ready, re-instate the RESTART button. But for now, go to bed.
+
 // When the "Again! Again!" button is pressed, do this:
 
 ciderApp.restart = function() {
