@@ -153,7 +153,7 @@ ciderApp.getData = function(decision){
 		dataType: 'json',
 		data: {
 			q: 'Ciders',
-			per_page: '100'
+			per_page: '40'
 		} // data
 	}) // -- $.ajax -->
 	.then(function(res){

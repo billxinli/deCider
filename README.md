@@ -1,7 +1,7 @@
 # deCider
 
-<img src="portfolio_decider_v2.png">
+<img src="http://justine.codes/wp-content/uploads/2016/06/imac_decider_v3.png">
 
-An API Web Application For Thirsty Cider-Lovers.
+A Web Application using a RESTful API for thirsty, indecisive cider-lovers.
 
 This web app accesses the <a href="http://www.lcboapi.com">LCBO API</a>.

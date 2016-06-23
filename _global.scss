@@ -59,6 +59,15 @@ h1 {
 	@media (max-width: 768px) {
 		font-size: 7rem;
 	}
+
+	@media (max-width: 340px) {
+		font-size: 5rem;
+	}
+
+	@media (max-width: 236px) {
+		font-size: 3rem;
+	}
+
 }
 
 h2 {
@@ -66,6 +75,14 @@ h2 {
 
 	@media (max-width: 768px) {
 		font-size: 3rem;
+	}
+
+	@media (max-width: 340px) {
+		font-size: 2rem;
+	}
+
+	@media (max-width: 236px) {
+		font-size: 1.6rem;
 	}
 
 }
@@ -81,13 +98,17 @@ h3 {
 }
 
 p {
-	font-size: 1.4rem;
+	font-size: 2rem;
 	margin: auto;
 }
 
 .flex {
 	display: flex;
 	flex-wrap: wrap;
+}
+
+.align-center {
+	align-items: center;
 }
 
 .sweet {
@@ -155,10 +176,6 @@ header {
 		width: 100%;
 	}
 
-	.cider {
-		color: $ROSE;
-	}
-
 	h1 {
 		color: $PEACH;
 		text-shadow: 2px 2px black;
@@ -202,28 +219,18 @@ header {
 
 .style-wrapper {
 	display: flex;
-	width: 100%;
-	justify-content: space-between;
+	width: 60%;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
 }
 
 .globalTaste {
 	border-radius: 10px;
 	width: 100%;
-	margin: 10px;
+	margin-bottom: 20px;
 	text-align: center;
 	display: flex;
-
-	@media (max-width: 768px) {
-		height: 120px;
-		width: 120px;
-		border-radius: 15px;
-	}
-
-	@media (max-width: 425px) {
-		height: 100px;
-		width: 100px;
-	}
-
 }
 
 // =============
@@ -240,13 +247,18 @@ header {
 	min-height: 100vh;
 }
 
-.subDryChoices .flexItem {
-		width: 15%;
+.flexItem {
+	width: 100%;
+	font-weight: bold;
+}
 
-		@media (max-width: 1100px) {
-			width: 50%;
-		}
-	}
+.subSweetChoices .flexItem {
+	color: $DARKPEACH;
+}
+
+.subDryChoices .flexItem {
+	color: $ROSE;
+}
 
 // =============
 // TASTE SECTION
@@ -267,8 +279,8 @@ header {
 		padding: 30px;
 		vertical-align: middle;
 
-		@media (max-width: 425px) {
-			font-size: 1.4rem;
+		@media (max-width: 260px) {
+			padding: 2px;
 		}
 	}
 }
@@ -305,16 +317,27 @@ header {
 // LABELS
 // =============
 
-.beforeSelection {
+.subSweetChoices .beforeSelection {
 	@extend .globalTaste;
 	@extend .sweet-next;
 	box-shadow: 5px 5px 0px 0px $DARKPEACH;
 	transition: all 0.3s ease-in-out;
 }
 
-.selectionMade {
-	background: $DARKPEACH;
-	color: white;
+.subDryChoices .beforeSelection {
+	@extend .globalTaste;
+	@extend .sweet-next;
+	box-shadow: 5px 5px 0px 0px $ROSE;
+	transition: all 0.3s ease-in-out;
+}
+
+.subSweetChoices .selectionMade {
+	background: $YELLOW;
+	box-shadow: 0px 0px 0px 0px $LIGHTPEACH;
+}
+
+.subDryChoices .selectionMade {
+	background: $YELLOW;
 	box-shadow: 0px 0px 0px 0px $LIGHTPEACH;
 }
 
@@ -338,45 +361,63 @@ input[type=radio]{
 // BUTTONS
 // =============
 
-button {
-	padding: 20px;
+.button {
+	padding: 20px;	
+	border-radius: 10px;
+	display: block;
+	margin: 20px auto 0px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 2rem;
+	width: 60%;
 }
 
-button.use {
+.subSweetChoices .button:hover {
+	background: $PEACH;
+	color: $YELLOW;
+}
+
+.subSweetChoices p {
+	color: $DARKPEACH;
+}
+
+.subDryChoices p {
+	color: $ROSE;
+}
+
+.subDryChoices .button:hover {
+	background: transparent;
+	// color: transparent;
+}
+
+.use {
 	background: transparent;
 	border: 2px solid $YELLOW;
-	border-radius: 10px;
-	width: 60%;
-	margin-top: 30px;
+}
 
-	&:hover {
-		background: $YELLOW;
-		color: black;
-	}
+.hero .use {
+	color: $PEACH;
+}
 
-	p {
-		color:  $PEACH;
-		text-transform: uppercase;
-		font-weight: bold;
-		font-size: 2rem;
+a.use:hover {
+	color: $YELLOW;
+}
 
-		&:hover {
-			color: black;
-		}
-	}
+.cider {
+	color: $ROSE;
+}
 
-	a {
-		color: $OFFWHITE;
-	}
+.cider:hover {
+	color: $YELLOW;
+}
 
-	@media (max-width: 768px) {
-		width: 50%;
-	}
+a {
+	color: $OFFWHITE;
 }
 
 .showMeSuggestions {
 
-	@extend button.use;
+	@extend .use;
 	text-align: center;
 	width: 100%;
 

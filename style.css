@@ -210,6 +210,18 @@ h1 {
   }
 }
 
+@media (max-width: 340px) {
+  h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 236px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
 h2 {
   font-size: 3.5rem;
 }
@@ -217,6 +229,18 @@ h2 {
 @media (max-width: 768px) {
   h2 {
     font-size: 3rem;
+  }
+}
+
+@media (max-width: 340px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 236px) {
+  h2 {
+    font-size: 1.6rem;
   }
 }
 
@@ -231,7 +255,7 @@ h3 {
 }
 
 p {
-  font-size: 1.4rem;
+  font-size: 2rem;
   margin: auto;
 }
 
@@ -240,11 +264,15 @@ p {
   flex-wrap: wrap;
 }
 
+.align-center {
+  align-items: center;
+}
+
 .sweet {
   background: #F3A871;
 }
 
-.sweet-next, .beforeSelection {
+.sweet-next, .subSweetChoices .beforeSelection, .subDryChoices .beforeSelection {
   background: #F9D3B8;
 }
 
@@ -302,10 +330,6 @@ header {
   }
 }
 
-.hero .cider {
-  color: #F06161;
-}
-
 .hero h1 {
   color: #F3A871;
   text-shadow: 2px 2px black;
@@ -345,31 +369,18 @@ header {
 
 .style-wrapper {
   display: flex;
-  width: 100%;
-  justify-content: space-between;
+  width: 60%;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
 }
 
-.globalTaste, .beforeSelection {
+.globalTaste, .subSweetChoices .beforeSelection, .subDryChoices .beforeSelection {
   border-radius: 10px;
   width: 100%;
-  margin: 10px;
+  margin-bottom: 20px;
   text-align: center;
   display: flex;
-}
-
-@media (max-width: 768px) {
-  .globalTaste, .beforeSelection {
-    height: 120px;
-    width: 120px;
-    border-radius: 15px;
-  }
-}
-
-@media (max-width: 425px) {
-  .globalTaste, .beforeSelection {
-    height: 100px;
-    width: 100px;
-  }
 }
 
 .subSweetChoices, .subDryChoices {
@@ -382,14 +393,17 @@ header {
   min-height: 100vh;
 }
 
-.subDryChoices .flexItem {
-  width: 15%;
+.flexItem {
+  width: 100%;
+  font-weight: bold;
 }
 
-@media (max-width: 1100px) {
-  .subDryChoices .flexItem {
-    width: 50%;
-  }
+.subSweetChoices .flexItem {
+  color: #ed7b2a;
+}
+
+.subDryChoices .flexItem {
+  color: #F06161;
 }
 
 .taste-section {
@@ -409,9 +423,9 @@ header {
   vertical-align: middle;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 260px) {
   .taste-section p {
-    font-size: 1.4rem;
+    padding: 2px;
   }
 }
 
@@ -443,14 +457,23 @@ header {
   background: #F6EA8C;
 }
 
-.beforeSelection {
+.subSweetChoices .beforeSelection {
   box-shadow: 5px 5px 0px 0px #ed7b2a;
   transition: all 0.3s ease-in-out;
 }
 
-.selectionMade {
-  background: #ed7b2a;
-  color: white;
+.subDryChoices .beforeSelection {
+  box-shadow: 5px 5px 0px 0px #F06161;
+  transition: all 0.3s ease-in-out;
+}
+
+.subSweetChoices .selectionMade {
+  background: #F6EA8C;
+  box-shadow: 0px 0px 0px 0px #F9D3B8;
+}
+
+.subDryChoices .selectionMade {
+  background: #F6EA8C;
   box-shadow: 0px 0px 0px 0px #F9D3B8;
 }
 
@@ -472,42 +495,57 @@ input[type=radio] {
   display: none;
 }
 
-button {
+.button {
   padding: 20px;
-}
-
-button.use, .showMeSuggestions {
-  background: transparent;
-  border: 2px solid #F6EA8C;
   border-radius: 10px;
-  width: 60%;
-  margin-top: 30px;
-}
-
-button.use:hover, .showMeSuggestions:hover {
-  background: #F6EA8C;
-  color: black;
-}
-
-button.use p, .showMeSuggestions p {
-  color: #F3A871;
+  display: block;
+  margin: 20px auto 0px;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 2rem;
+  width: 60%;
 }
 
-button.use p:hover, .showMeSuggestions p:hover {
-  color: black;
+.subSweetChoices .button:hover {
+  background: #F3A871;
+  color: #F6EA8C;
 }
 
-button.use a, .showMeSuggestions a {
+.subSweetChoices p {
+  color: #ed7b2a;
+}
+
+.subDryChoices p {
+  color: #F06161;
+}
+
+.subDryChoices .button:hover {
+  background: transparent;
+}
+
+.use, .showMeSuggestions {
+  background: transparent;
+  border: 2px solid #F6EA8C;
+}
+
+.hero .use, .hero .showMeSuggestions {
+  color: #F3A871;
+}
+
+a.use:hover, a.showMeSuggestions:hover {
+  color: #F6EA8C;
+}
+
+.cider {
+  color: #F06161;
+}
+
+.cider:hover {
+  color: #F6EA8C;
+}
+
+a {
   color: #FFFBE0;
-}
-
-@media (max-width: 768px) {
-  button.use, .showMeSuggestions {
-    width: 50%;
-  }
 }
 
 .showMeSuggestions {
@@ -547,32 +585,4 @@ figure {
 
 .drinkImg {
   width: 100%;
-}
-
-@media (max-width: 769px) {
-  .subDryChoices .flexWrapper {
-    width: 100%;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  .subSweetChoices .flexWrapper {
-    width: 100%;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  .subDryChoices .flexItem {
-    width: 50%;
-  }
-  .subSweetChoices .flexItem {
-    width: 33%;
-  }
-  .subDryChoices label {
-    width: 90%;
-  }
-}
-
-@media (max-width: 469px) {
-  .flexItem {
-    width: 100%;
-  }
 }
