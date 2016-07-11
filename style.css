@@ -446,7 +446,7 @@ header {
 }
 
 .sweet-sub-choices .showMeSuggestions {
-  background: #F6EA8C;
+  background: white;
 }
 
 .dry-sub-choices .flexWrapper {
@@ -460,7 +460,7 @@ header {
 }
 
 .dry-sub-choices .showMeSuggestions {
-  background: #F6EA8C;
+  background: white;
 }
 
 .subSweetChoices .beforeSelection {
@@ -555,7 +555,7 @@ a {
 
 .showMeSuggestions {
   text-align: center;
-  width: 100%;
+  width: 80%;
 }
 
 .super-final-results {

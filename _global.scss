@@ -301,7 +301,7 @@ header {
 }
 
 .sweet-sub-choices .showMeSuggestions {
-	background: $YELLOW;
+	background: white;
 }
 
 .dry-sub-choices .flexWrapper {
@@ -313,7 +313,7 @@ header {
 }
 
 .dry-sub-choices .showMeSuggestions {
-	background: $YELLOW;
+	background: white;
 }
 
 // =============
@@ -422,7 +422,7 @@ a {
 
 	@extend .use;
 	text-align: center;
-	width: 100%;
+	width: 80%;
 
 }
 
