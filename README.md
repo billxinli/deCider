@@ -1,6 +1,6 @@
 # deCider
 
-<img src="http://justine.codes/wp-content/uploads/2016/06/imac_decider_v3.png">
+<img src="http://i.imgur.com/aeMkS.jpg">
 
 For thirsty, indecisive cider-lovers.
 

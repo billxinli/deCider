@@ -8,7 +8,7 @@ console.log('nailing it');
 var ciderApp = {};
 
 // LCBO API URL with Access Key
-ciderApp.apiUrl = 'https://lcboapi.com/products/?access_key=MDplMzgyZmMzNC0xZmEyLTExZTYtYTRkOS1jZmFmZTcxODU4YTI6NEhMYURFWkptTXByNlZhQXFFVUk5cGcxNTlxa3A4cE5Pc0xN';
+ciderApp.apiUrl = 'https://lcboapi.com/products/?access_key=MDo5Y2I3MzNmNi04OWRkLTExZTYtOTdmMi0xYjE0ZTZhY2UwOTQ6UkwwUmwyUFFhSFFGN0ViRE56V01RYjE5VTNpUjhqRTZZTzRN';
 
 //===================================================*/
 /* HERO STUFF
@@ -154,13 +154,11 @@ ciderApp.getData = function(decision){
 		method: 'GET',
 		dataType: 'json',
 		data: {
-			q: 'Ciders',
+			q: 'Pabst Blue Ribbon',
 			per_page: '40'
 		} // data
 	}) // -- $.ajax -->
 	.then(function(res){
-		console.log(res.result[9]);
-		console.log(res.result[9].id);
 		var onlyImages = res.result.filter(function(cider) {
 			return cider.image_url
 		});
@@ -168,16 +166,9 @@ ciderApp.getData = function(decision){
 //===================================================*/
 /* RANDOM RESULTS
 ===================================================*/
-		if (decision === 'random'){
 			var randomResults = _.sample(onlyImages, 2);
 			ciderApp.displayCiders(randomResults);
-		} else{
-				var filteredResults = onlyImages.filter(function(cider) {
-					return cider.style === decision  && cider.id != '184796' || cider.style === `Medium-${decision}` && cider.id != '184796';
-				});
 
-				ciderApp.displayCiders(filteredResults);
-		}; // -- end of if / else statement;
 
 	}); // -- .then -->
 
